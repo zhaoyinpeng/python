@@ -19,7 +19,11 @@ document.add_paragraph(
 document.add_paragraph(
     'first item in ordered list', style='List Number'
 )
-#添加图片
+# 强制下一页
+
+document.add_heading('强制下一页', level=2)
+document.add_page_break()
+# 添加图片
 dirPath = ".//img//"
 document.add_picture(dirPath+'girl.jpg', width=Inches(1.25))
 
@@ -43,5 +47,3 @@ for qty, id, desc in records:
 # document.add_page_break()
 
 document.save('demo.docx')
-
-input()
